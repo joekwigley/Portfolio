@@ -45,12 +45,6 @@ body {
   color: #58adb8;
 }
 
-  .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-    color: white;
-    font-weight: bold;
-    font-size:21px;
-  }
-
   .navbar-collapse {
     margin-top: 1%;
 }

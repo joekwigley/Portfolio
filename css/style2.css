@@ -153,9 +153,13 @@ body {
   
   .quote {
     font-family: 'News Cycle', sans-serif;
-      font-style:italic;
-      font-size: 2.5em;
-      margin-bottom: 15px;
+    font-style:italic;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+
+  .quote-p {
+    font-family: 'Raleway', sans-serif;
   }
 
   .title {

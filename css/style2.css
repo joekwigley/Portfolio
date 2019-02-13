@@ -1,0 +1,416 @@
+/* my code */
+
+body {
+    background-color: white;
+  }
+
+  /* Sliding Nav Bar */
+
+#sidebarCollapse {
+  width: 40px;
+  height: 40px;
+  background: #f5f5f5;
+}
+
+#sidebarCollapse span {
+  width: 80%;
+  height: 2px;
+  margin: 0 auto;
+  display: block;
+  background: #555;
+  transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+}
+
+#sidebarCollapse span:first-of-type {
+  /* rotate first one */
+  transform: rotate(45deg) translate(2px, 2px);
+}
+#sidebarCollapse span:nth-of-type(2) {
+  /* second one is not visible */
+  opacity: 0;
+}
+#sidebarCollapse span:last-of-type {
+  /* rotate third one */
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+#sidebarCollapse.active span {
+  /* no rotation */
+  transform: none;
+  /* all bars are visible */
+  opacity: 1;
+  margin: 5px auto;
+}
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  perspective: 1500px; 
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #7386D5;
+  color: #fff;
+  transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+  transform-origin: center left; /* Set the transformed position of sidebar to center left side. */
+}
+
+#sidebar.active {
+  margin-left: -250px;
+  transform: rotateY(100deg); /* Rotate sidebar vertically by 100 degrees. */
+}
+
+@media (max-width: 768px) {
+  /* Reversing the behavior of the sidebar: 
+     it'll be rotated vertically and off canvas by default, 
+     collapsing in on toggle button click with removal of 
+     the vertical rotation.   */
+  #sidebar {
+      margin-left: -250px;
+      transform: rotateY(100deg);
+  }
+  #sidebar.active {
+      margin-left: 0;
+      transform: none;
+  }
+
+  /* Reversing the behavior of the bars: 
+     Removing the rotation from the first,
+     last bars and reappear the second bar on default state, 
+     and giving them a vertical margin */
+  #sidebarCollapse span:first-of-type,
+  #sidebarCollapse span:nth-of-type(2),
+  #sidebarCollapse span:last-of-type {
+      transform: none;
+      opacity: 1;
+      margin: 5px auto;
+  }
+
+  /* Removing the vertical margin and make the first and last bars rotate again when the sidebar is open, hiding the second bar */
+  #sidebarCollapse.active span {
+      margin: 0 auto;
+  }
+  #sidebarCollapse.active span:first-of-type {
+      transform: rotate(45deg) translate(2px, 2px);
+  }
+  #sidebarCollapse.active span:nth-of-type(2) {
+      opacity: 0;
+  }
+  #sidebarCollapse.active span:last-of-type {
+      transform: rotate(-45deg) translate(1px, -1px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  .navbar-nav {
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    float: right;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgb(141,218,60);
+  }
+
+  .navbar-dark .navbar-brand {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(141,218,60);
+}
+
+.navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover {
+  color:rgb(141,218,60);
+}
+
+.title-small {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 0.7em;
+  color: rgb(141,218,60);
+}
+
+  .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: white;
+    font-weight: bold;
+    font-size:21px;
+  }
+
+  .navbar-collapse {
+    margin-top: 1%;
+}
+
+  .navbar>.container, .navbar>.container-fluid {
+    margin-top: 1%;
+}
+
+.navbar-toggler:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  outline-color: rgb(141,218,60);
+}
+
+  #toggler-icon {
+    color: rgb(141,218,60);
+    font-size: 30px;
+  }
+  
+  .container {
+    max-width: 960px;
+  }
+    
+  #banner {
+    background-image: url("images/cover1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 900px;
+  
+  }
+  
+  /* parallax */
+  
+  #banner, .pimg2, .pimg3{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    /* fixed = parallax, scroll = normal */
+    background-attachment: fixed; 
+  
+  }
+  
+  .pimg2 {
+    background-image: url("images/2402.jpg");
+    min-height: 500px;
+    
+  }
+  
+  .pimg3 {
+    background-image: url("images/690.jpg");
+    min-height: 500px;
+    
+  }
+  
+  .section {
+    text-align: center;
+    padding: 80px 80px;
+  }
+  
+  .section-light {
+    background-color: #f1f1ef;
+    color: #222;
+  }
+  
+  .section-dark {
+    background-color: #282e34;
+    color:#ddd;
+  }
+  
+  .ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+  }
+  
+  .quote {
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      font-size: 2.5em;
+      color: rgb(141,218,60);
+  }
+
+  .title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #58adb8;
+  }
+
+
+  .CV {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #58adb8;
+    padding: 3%;
+    border-radius: 100%;
+    border: 3px solid #58adb8;
+    background-color: #f1f1ef;
+    letter-spacing: 5px;
+}
+
+  a.CV:hover {
+    color:rgb(141,218,60);
+    text-decoration: none;
+    border: 3px solid rgb(141,218,60);
+  }
+
+  .about {
+    padding: 1.5%;
+  }
+  
+  /*
+   * Custom translucent site header
+   */
+  
+  .site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    z-index: 10;
+    position:absolute;
+    width: 100vw;
+  }
+  .site-header a {
+    color: #976e5a;
+    transition: ease-in-out color .15s;
+  }
+  .site-header a:hover {
+    color: #222;
+    text-decoration: none;
+    background-color:none;
+  }
+  
+  .dropdown-item:focus, .dropdown-item:hover {
+    text-decoration: none;
+    background-color: #976e5a;
+  }
+  
+  /*
+   * Dummy devices (replace them with your own or something else entirely!)
+   */
+  
+  .product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 540px;
+    background-color: #333;
+    border-radius: 21px;
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+  
+  .product-device::before {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    bottom: 10%;
+    left: 10px;
+    content: "";
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+  }
+  
+  .product-device-2 {
+    top: -25%;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+    background-color: #e5e5e5;
+  }
+  
+  #footer {
+    background-color: #222;
+    opacity: 0.8;
+  }
+  
+  .h5, h5 {
+    font-size: 1.25rem;
+    color: #f1f1ef;
+  }
+  
+  .footer-text, .date {
+    color: #f1f1ef;
+  }  
+  /*
+   * Extra utilities
+   */
+  
+  .flex-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+  @media (min-width: 768px) {
+    .flex-md-equal > * {
+      -ms-flex: 1;
+      flex: 1;
+    }
+  }
+  
+  .overflow-hidden { overflow: hidden; }
+  
+  @media only screen and (min-width: 576px) {
+      .navbar-light .navbar-nav .nav-link {
+      margin-left: 20px;
+    }
+  }
+  
+  @media(max-width:568px) {
+  
+    #banner, .pimg2, .pimg3 {
+        background-attachment: scroll;
+    }
+  
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1500px) { 
+    .main-content {
+      margin-bottom: 20%;
+    }
+  }
+  
+  @media screen and (min-width: 992px) and (max-width: 1200px) { 
+    #banner {
+      background-image: url('images/cover1.jpg');
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 992px) { 
+    #banner {
+      background-image: url('images/cover_md.png');
+    }
+  }
+  
+  @media screen and (min-width: 576px) and (max-width: 768px) { 
+    #banner {
+      background-image: url('images/cover_sm.png');
+    }
+  }
+  
+  @media screen and (min-width: 480px) and (max-width: 576px) { 
+    #banner {
+      background-image: url('images/cover_xs.png');
+    }
+  }
+  
+  @media screen and (min-width: 320px) and (max-width: 480px) { 
+    #banner {
+      background-image: url('images/cover_xxs.png');
+    }
+  }

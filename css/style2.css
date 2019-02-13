@@ -35,7 +35,7 @@ body {
 }
 
 .navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover {
-  color:r#58adb8;
+  color:#58adb8;
 }
 
 .title-small {
@@ -57,6 +57,11 @@ body {
 
   .navbar>.container, .navbar>.container-fluid {
     margin-top: 1%;
+}
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255,255,255,.5);
+  border-color: transparent;
 }
 
 .navbar-toggler:not(:disabled):not(.disabled) {
@@ -164,6 +169,11 @@ body {
     font-weight: bold;
     font-size: 2.5em;
     color: rgb(141,218,60);
+  }
+
+  .card-title:hover {
+    color: black;
+
   }
 
   .card-text {

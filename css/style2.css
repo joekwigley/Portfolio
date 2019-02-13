@@ -4,6 +4,19 @@ body {
     background-color: white;
   }
 
+  /*
+   * Custom translucent site header
+   */
+  
+   .site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    z-index: 10;
+    position:absolute;
+    width: 100vw;
+  }
+
   .navbar-nav {
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
@@ -70,7 +83,7 @@ body {
   
   /* parallax */
   
-  #banner, .pimg2, .pimg3{
+  #banner, .pimg2, .pimg3, .pimg4{
     position: relative;
     background-position: center;
     background-size: cover;
@@ -93,6 +106,11 @@ body {
     
   }
 
+  .pimg4 {
+    background-image: url("images/drift.jpg");
+    min-height: 600px;
+  }
+
   .header {
     background-color: #010101;
     text-align: center;
@@ -109,17 +127,18 @@ body {
   
   .section {
     text-align: center;
-    padding: 70px 80px;
+    padding: 60px 80px;
   }
   
   .section-light {
-    background-color: #f1f1ef;
+    background-color: lightgrey;
     color: #222;
   }
   
-  .section-dark {
-    background-color: #282e34;
-    color:#ddd;
+  .section-header {
+    background-color: white;
+    text-align: center;
+    padding: 30px 80px;
   }
   
   .ptext {
@@ -147,11 +166,16 @@ body {
     color: rgb(141,218,60);
   }
 
+  .card-text {
+    font-size: 0.9em;
+    font-family: 'Roboto', sans-serif;
+  }
+
 
   .CV {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 2.2em;
     color: #58adb8;
     padding: 3%;
     border-radius: 100%;
@@ -167,33 +191,33 @@ body {
   }
 
   .about {
-    padding: 1.5%;
+    text-align: justify;
   }
   
-  /*
-   * Custom translucent site header
-   */
   
-  .site-header {
-    background-color: rgba(0, 0, 0, .85);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
-    z-index: 10;
-    position:absolute;
-    width: 100vw;
-  }
-
-
   
-
   .footer {
     background-color: #010101;
+    text-align: center;
+    padding: 80px 80px;
+  }
+
+  .fab, .fas {
+    color: white;
+    margin-top: 2.5%;
+    font-size:2em;
+    padding: 0 20px;
   }
   
   .h5, h5 {
     font-size: 1.25rem;
-    color: #f1f1ef;
+    color: lightgrey;
   }
+
+  button.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
   
   .footer-text, .date {
     color: #f1f1ef;

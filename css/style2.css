@@ -4,123 +4,6 @@ body {
     background-color: white;
   }
 
-  /* Sliding Nav Bar */
-
-#sidebarCollapse {
-  width: 40px;
-  height: 40px;
-  background: #f5f5f5;
-}
-
-#sidebarCollapse span {
-  width: 80%;
-  height: 2px;
-  margin: 0 auto;
-  display: block;
-  background: #555;
-  transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
-}
-
-#sidebarCollapse span:first-of-type {
-  /* rotate first one */
-  transform: rotate(45deg) translate(2px, 2px);
-}
-#sidebarCollapse span:nth-of-type(2) {
-  /* second one is not visible */
-  opacity: 0;
-}
-#sidebarCollapse span:last-of-type {
-  /* rotate third one */
-  transform: rotate(-45deg) translate(1px, -1px);
-}
-
-#sidebarCollapse.active span {
-  /* no rotation */
-  transform: none;
-  /* all bars are visible */
-  opacity: 1;
-  margin: 5px auto;
-}
-
-.wrapper {
-  display: flex;
-  align-items: stretch;
-  perspective: 1500px; 
-}
-
-#sidebar {
-  min-width: 250px;
-  max-width: 250px;
-  background: #7386D5;
-  color: #fff;
-  transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
-  transform-origin: center left; /* Set the transformed position of sidebar to center left side. */
-}
-
-#sidebar.active {
-  margin-left: -250px;
-  transform: rotateY(100deg); /* Rotate sidebar vertically by 100 degrees. */
-}
-
-@media (max-width: 768px) {
-  /* Reversing the behavior of the sidebar: 
-     it'll be rotated vertically and off canvas by default, 
-     collapsing in on toggle button click with removal of 
-     the vertical rotation.   */
-  #sidebar {
-      margin-left: -250px;
-      transform: rotateY(100deg);
-  }
-  #sidebar.active {
-      margin-left: 0;
-      transform: none;
-  }
-
-  /* Reversing the behavior of the bars: 
-     Removing the rotation from the first,
-     last bars and reappear the second bar on default state, 
-     and giving them a vertical margin */
-  #sidebarCollapse span:first-of-type,
-  #sidebarCollapse span:nth-of-type(2),
-  #sidebarCollapse span:last-of-type {
-      transform: none;
-      opacity: 1;
-      margin: 5px auto;
-  }
-
-  /* Removing the vertical margin and make the first and last bars rotate again when the sidebar is open, hiding the second bar */
-  #sidebarCollapse.active span {
-      margin: 0 auto;
-  }
-  #sidebarCollapse.active span:first-of-type {
-      transform: rotate(45deg) translate(2px, 2px);
-  }
-  #sidebarCollapse.active span:nth-of-type(2) {
-      opacity: 0;
-  }
-  #sidebarCollapse.active span:last-of-type {
-      transform: rotate(-45deg) translate(1px, -1px);
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
   .navbar-nav {
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
@@ -128,25 +11,25 @@ body {
   }
   
   .navbar-dark .navbar-nav .nav-link {
-    color: rgb(141,218,60);
+    color: #58adb8;
   }
 
   .navbar-dark .navbar-brand {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 1.5em;
-    color: rgb(141,218,60);
+    color: #58adb8;
 }
 
 .navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover {
-  color:rgb(141,218,60);
+  color:r#58adb8;
 }
 
 .title-small {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 0.7em;
-  color: rgb(141,218,60);
+  color: #58adb8;
 }
 
   .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
@@ -165,11 +48,11 @@ body {
 
 .navbar-toggler:not(:disabled):not(.disabled) {
   cursor: pointer;
-  outline-color: rgb(141,218,60);
+  outline-color: #58adb8;
 }
 
   #toggler-icon {
-    color: rgb(141,218,60);
+    color: #58adb8;
     font-size: 30px;
   }
   
@@ -178,10 +61,10 @@ body {
   }
     
   #banner {
-    background-image: url("images/cover1.jpg");
+    background-image: url("images/code2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 900px;
+    min-height: 1000px;
   
   }
   
@@ -199,20 +82,34 @@ body {
   }
   
   .pimg2 {
-    background-image: url("images/2402.jpg");
-    min-height: 500px;
+    background-image: url("images/me.jpg");
+    min-height: 600px;
     
   }
   
   .pimg3 {
-    background-image: url("images/690.jpg");
-    min-height: 500px;
+    background-image: url("images/code.jpg");
+    min-height: 600px;
     
+  }
+
+  .header {
+    background-color: #010101;
+    text-align: center;
+    padding: 50px 50px;
+  }
+
+  .intro {
+    color: #58adb8;
+    font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+
   }
   
   .section {
     text-align: center;
-    padding: 80px 80px;
+    padding: 70px 80px;
   }
   
   .section-light {
@@ -237,17 +134,17 @@ body {
   }
   
   .quote {
-      font-family: 'Raleway', sans-serif;
-      font-weight: bold;
+    font-family: 'News Cycle', sans-serif;
+      font-style:italic;
       font-size: 2.5em;
-      color: rgb(141,218,60);
+      margin-bottom: 15px;
   }
 
   .title {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 2.5em;
-    color: #58adb8;
+    color: rgb(141,218,60);
   }
 
 
@@ -259,7 +156,7 @@ body {
     padding: 3%;
     border-radius: 100%;
     border: 3px solid #58adb8;
-    background-color: #f1f1ef;
+    background-color: #010101;
     letter-spacing: 5px;
 }
 
@@ -285,59 +182,12 @@ body {
     position:absolute;
     width: 100vw;
   }
-  .site-header a {
-    color: #976e5a;
-    transition: ease-in-out color .15s;
-  }
-  .site-header a:hover {
-    color: #222;
-    text-decoration: none;
-    background-color:none;
-  }
+
+
   
-  .dropdown-item:focus, .dropdown-item:hover {
-    text-decoration: none;
-    background-color: #976e5a;
-  }
-  
-  /*
-   * Dummy devices (replace them with your own or something else entirely!)
-   */
-  
-  .product-device {
-    position: absolute;
-    right: 10%;
-    bottom: -30%;
-    width: 300px;
-    height: 540px;
-    background-color: #333;
-    border-radius: 21px;
-    -webkit-transform: rotate(30deg);
-    transform: rotate(30deg);
-  }
-  
-  .product-device::before {
-    position: absolute;
-    top: 10%;
-    right: 10px;
-    bottom: 10%;
-    left: 10px;
-    content: "";
-    background-color: rgba(255, 255, 255, .1);
-    border-radius: 5px;
-  }
-  
-  .product-device-2 {
-    top: -25%;
-    right: auto;
-    bottom: 0;
-    left: 5%;
-    background-color: #e5e5e5;
-  }
-  
-  #footer {
-    background-color: #222;
-    opacity: 0.8;
+
+  .footer {
+    background-color: #010101;
   }
   
   .h5, h5 {
@@ -348,6 +198,20 @@ body {
   .footer-text, .date {
     color: #f1f1ef;
   }  
+
+
+.bktop {
+  text-decoration: none;
+  font-size: 13px;
+  color: rgb(141,218,60);
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+a.bktop:hover {
+  color: rgb(141,218,60);
+  text-decoration: none;
+}
   /*
    * Extra utilities
    */
@@ -387,30 +251,30 @@ body {
   
   @media screen and (min-width: 992px) and (max-width: 1200px) { 
     #banner {
-      background-image: url('images/cover1.jpg');
+      background-image: url('images/code2.jpg');
     }
   }
   
   @media screen and (min-width: 768px) and (max-width: 992px) { 
     #banner {
-      background-image: url('images/cover_md.png');
+      background-image: url('images/cover1md.jpg');
     }
   }
   
   @media screen and (min-width: 576px) and (max-width: 768px) { 
     #banner {
-      background-image: url('images/cover_sm.png');
+      background-image: url('images/cover1sm.jpg');
     }
   }
   
   @media screen and (min-width: 480px) and (max-width: 576px) { 
     #banner {
-      background-image: url('images/cover_xs.png');
+      background-image: url('images/cover1xs.jpg');
     }
   }
   
   @media screen and (min-width: 320px) and (max-width: 480px) { 
     #banner {
-      background-image: url('images/cover_xxs.png');
+      background-image: url('images/cover1xxs.jpg');
     }
   }

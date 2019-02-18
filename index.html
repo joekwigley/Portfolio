@@ -9,9 +9,9 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/style2.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=News+Cycle|Raleway|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit|Montserrat|Muli|Raleway|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    
+   
     
 
     
@@ -20,11 +20,11 @@
   </head>
 
   <body> 
-    <nav class=" site-header py-1 navbar navbar-dark" style="background-color:transparent" >
+    <nav class="site-header py-1 navbar navbar-dark" style="background-color:transparent" >
       <div class="container-fluid">
-            <h2 class=" navbar-brand">Joe Wigley | <span class="title-small">Web Developer</span></h2> 
+            <h2 class="navbar-brand">Joe Wigley | <span class="title-small">Web Developer</span></h2> 
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#TogglerNav" 
+          <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#TogglerNav" 
             aria-controls="TogglerNav" aria-expanded="false" aria-label="Toggle navigation">
             <span><i class="fas fa-bars" id="toggler-icon"></i></span>
         </button>
@@ -60,11 +60,11 @@
 
     <a name="about"></a>
     <section class="section-header mt-3">
-            <h2>About Me</h2>
+            <h2 class="headings">About</h2>
         </section>
 
-        <div class="container about mb-5">
-            <p> Hi I’m Joe, 28 years old, ginger, but I like to say strawberry blonde just to be awkward. 
+        <div class="container mb-3">
+            <p class="about-text"> Hi I’m Joe, 28 years old, ginger, but I like to say strawberry blonde just to be awkward. 
                 I work full time as a systems developer and study part time in web design. I spend a lot of time in the gym, 
                 eating or doing something car or motorbike related. I drift whenever I can, modify my car when money lets me, 
                 and ride my KTM when the weather is good. Yes, I am a fair-weather rider and no I am not ashamed of that, 
@@ -83,11 +83,11 @@
     <!-- End of parralax images -->
     <a name="projects"></a>
     <section class="section-header">
-            <h2>My Projects</h2>
-                <p>Below are some of the projects I have created since starting my journey as a web developer</p>
+            <h2 class="headings">Projects</h2>
         </section>
     <!-- End of parralax images -->
-    <div class="container">        
+    <div class="container">
+            <h6>Student Projects</h6>        
         <div class="row mt-3 mb-5">
             <div class="col-sm-6">
               <div class="card">
@@ -97,7 +97,7 @@
                         <h5 class="card-title">First Website</h5>
                     </button>
                     <div class="collapse" id="cardcontent1">
-                        <p class="card-text">My first project was the very first website I ever built. Starting with just HTML and CSS
+                        <p class="card-text">My first project was the ver y first website I ever built. Starting with just HTML and CSS
                             the world of websites was fascinating to me. From the first day I started coding, I was obsessesd, every spare
                             minute I had I would be in front of my Mac coding away on this website. It wasnt just an assignment for me
                             it was the start of a completely new journey. I wanted to learn as much as physically possible and show myself 
@@ -126,8 +126,8 @@
                 </div>
             </div>
         </div>
-
-    <div class="row mt-5 mb-5">
+        <h6>Client Projects</h6> 
+    <div class="row mt-3 mb-5">
             <div class="col-sm-6">
                 <div class="card">
                 <img class="card-img-top" src="images/placeholder.jpg" alt="Place holder">
@@ -170,13 +170,14 @@
 <a name="cv"></a>
 <section class="footer">
     <div class="container">
-        <a class="CV" href="CV-UNI.pdf" target="_blank">CV</a>
+        <a href="CV-UNI.pdf" target="_blank"><i class="far fa-file-pdf" id="cv-pdf"></i></a>
+        <h4 class="cv"> Download My CV</h4>
         </div>
     <a href="https://twitter.com/Joe_1522" target="_blank"><i class="fab fa-twitter-square" id="social-media-icons"></i></a>
     <a href="https://www.linkedin.com/in/joe-wigley-304296108/" target="_blank"><i class="fab fa-linkedin" id="social-media-icons"></i></a>
     <a href="mailto:joekwigley@aol.com" target="_blank"><i class="fas fa-envelope-square" id="social-media-icons"></i></a>
     <a href="https://github.com/joekwigley" target="_blank"><i class="fab fa-github-square"id="social-media-icons"></i></a>
-
+    <a class="to-top" href="#top"><i class="fas fa-angle-up"></i></a>
     </section>
 
 
@@ -187,7 +188,22 @@
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var offset = 250;
+            var duration = 500;
+
+            $(window).scroll(function(){
+                if($(this).scrollTop() > offset) {
+                    $('.to-top').fadeIn(duration);
+                } else {
+                    $('.to-top').fadeOut(duration);
+                }
+            }); 
+
+        });
+    </script>
 
   </body>
 </html>
